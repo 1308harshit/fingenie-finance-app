@@ -1,128 +1,63 @@
 # Fingenie - AI-Powered Finance Assistant
 
-A pixel-perfect landing page for Fingenie, an AI-powered finance and budgeting application. Built with React, TypeScript, and Vite.
+Fingenie is an AI-powered financial management application designed for users in India. Our platform provides intelligent budgeting, spending insights, anomaly detection, and cashflow forecasting to help you navigate your finances with confidence.
 
-## Features
+## About Fingenie
 
-- 🎨 Dark, modern UI inspired by premium finance apps
-- 📱 Responsive design (desktop, tablet, mobile)
-- ✨ AI-focused branding and messaging
-- 🖼️ Interactive phone mockup showcase with hover effects
-- 🎯 Smooth animations and transitions
-- 🚀 Fast performance with Vite
+Fingenie combines cutting-edge artificial intelligence with intuitive design to transform how you manage your money. Whether you're tracking daily expenses, planning for the future, or looking for smart financial insights, Fingenie is your trusted companion.
 
-## Tech Stack
+### Key Features
 
-- **React 19** - UI framework
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **CSS3** - Styling with modern features (gradients, backdrop-filter, animations)
+- 🤖 **AI-Powered Insights** - Smart transaction categorization and spending analysis
+- 📊 **Intelligent Budgeting** - Automated budget recommendations based on your habits
+- 🔍 **Anomaly Detection** - Real-time alerts for unusual spending patterns
+- 📈 **Cashflow Forecasting** - Predictive analytics for better financial planning
+- 🔒 **Bank-Level Security** - AES-256 encryption and secure data storage in India
+- 📱 **Multi-Platform** - Available on web, iOS, and Android
 
-## Project Structure
+## Why Choose Fingenie?
 
-```
-src/
-├── components/
-│   ├── HeaderNav.tsx       # Top navigation with logo
-│   ├── HeaderNav.css
-│   ├── Hero.tsx            # Main hero section with content
-│   ├── Hero.css
-│   ├── PhoneStack.tsx      # Phone mockups showcase
-│   └── PhoneStack.css
-├── App.tsx                 # Main app component
-├── App.css                 # App-level styles
-├── index.css               # Global styles and CSS variables
-└── main.tsx                # Entry point
+### Built for India
+- Compliant with Indian financial regulations and data protection laws
+- Data stored securely on servers located in India
+- Designed for Indian users and financial institutions
+- Support for Indian Rupees (₹) and local payment methods
 
-public/
-└── images/                 # Phone mockup images
-    ├── image1.jpeg
-    ├── image2.jpeg
-    └── image3.jpeg
-```
+### Privacy First
+- Your financial data stays on your device by default
+- We never sell or share your personal information
+- Complete control over your data with easy export options
+- Transparent privacy practices
 
-## Getting Started
+### AI That Learns
+- Personalized insights based on your unique spending patterns
+- Continuously improving predictions and recommendations
+- Smart alerts that help you save money
+- Accurate forecasting for better financial decisions
 
-### Prerequisites
+## Company Information
 
-- Node.js 16+ and npm
+**Vurlex Technologies**  
+Registered in India
 
-### Installation
+**Contact:**
+- Support: support@fingenie.vurlex.in
+- Privacy: privacy@fingenie.vurlex.in
+- Website: fingenie.vurlex.in
 
-1. Install dependencies:
-```bash
-npm install
-```
+## Legal
 
-2. Start the development server:
-```bash
-npm run dev
-```
+- [Terms & Conditions](https://fingenie.vurlex.in/terms-and-conditions)
+- [Privacy Policy](https://fingenie.vurlex.in/policy)
+- [FAQ](https://fingenie.vurlex.in/faq)
 
-3. Open your browser to the URL shown (typically `http://localhost:5173`)
+## Technology
 
-### Build for Production
+This website is built with modern web technologies to ensure fast performance and a seamless user experience:
+- React 19 with TypeScript
+- Responsive design for all devices
+- Optimized for speed and accessibility
 
-```bash
-npm run build
-```
+---
 
-The production-ready files will be in the `dist/` directory.
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
-
-## Deployment
-
-This site is designed to be deployed at `fingenie.vurlex.in`. You can deploy the `dist/` folder to any static hosting service:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3 + CloudFront
-- Any other static hosting provider
-
-## Design Highlights
-
-### Color Palette
-- Background: Dark gradients (#0a0a0f → #13131a → #1a1a2e)
-- Accent: Purple to Blue gradient (#8b5cf6 → #3b82f6)
-- Text: White primary, gray secondary
-
-### Key Components
-
-1. **HeaderNav**: Fixed navigation with Fingenie logo and links
-2. **Hero**: Two-column layout with marketing copy and CTAs
-3. **PhoneStack**: Three overlapping phone mockups with hover animations and AI insight card
-
-### Responsive Breakpoints
-- Desktop: 1024px+
-- Tablet: 768px - 1023px
-- Mobile: < 768px
-
-## Customization
-
-### Update Content
-Edit `src/components/Hero.tsx` to change:
-- Tagline and subtitle
-- CTA button text
-- Platform links
-- Footer links
-
-### Update Styling
-- Global colors: `src/index.css` (CSS variables)
-- Component styles: Individual `.css` files in `src/components/`
-
-### Replace Images
-Place new phone mockup images in `public/images/` and update references in `src/components/PhoneStack.tsx`
-
-## License
-
-Private project for Fingenie.
-
-## Contact
-
-For questions about this project, please contact the development team.
+© 2026 Vurlex Technologies. All rights reserved.

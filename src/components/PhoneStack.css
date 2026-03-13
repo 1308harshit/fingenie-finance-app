@@ -1,0 +1,228 @@
+.phone-stack {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.phone-container {
+  position: relative;
+  width: 700px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-mockup {
+  position: absolute;
+  width: 280px;
+  height: 560px;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 70px rgba(0, 0, 0, 0.6),
+    0 0 50px var(--accent-glow),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background: #000;
+  border: 3px solid rgba(255, 255, 255, 0.08);
+}
+
+.phone-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Left phone - rotated and positioned back */
+.phone-mockup:nth-child(1) {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-12deg) translateX(-30px);
+  z-index: 1;
+}
+
+/* Center phone - front and center, slightly elevated */
+.phone-mockup:nth-child(2) {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%) scale(1.08);
+  z-index: 3;
+  box-shadow: 
+    0 30px 90px rgba(0, 0, 0, 0.7),
+    0 0 60px rgba(139, 92, 246, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+/* Right phone - rotated opposite direction */
+.phone-mockup:nth-child(3) {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(12deg) translateX(30px);
+  z-index: 2;
+}
+
+/* Hover effects */
+.phone-stack:hover .phone-mockup:nth-child(1) {
+  transform: translateY(-50%) rotate(-12deg) translateX(-40px) translateY(-60px);
+}
+
+.phone-stack:hover .phone-mockup:nth-child(2) {
+  transform: translate(-50%, -60%) scale(1.12);
+}
+
+.phone-stack:hover .phone-mockup:nth-child(3) {
+  transform: translateY(-50%) rotate(12deg) translateX(40px) translateY(-60px);
+}
+
+.ai-insight-card {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(19, 19, 26, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+  z-index: 10;
+  animation: float 3s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.ai-insight-card h4 {
+  font-size: 0.75rem;
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.ai-insight-card p {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .phone-stack {
+    height: 550px;
+  }
+
+  .phone-container {
+    width: 600px;
+    height: 480px;
+  }
+
+  .phone-mockup {
+    width: 240px;
+    height: 480px;
+  }
+
+  .phone-mockup:nth-child(1) {
+    transform: translateY(-50%) rotate(-10deg) translateX(-20px);
+  }
+
+  .phone-mockup:nth-child(3) {
+    transform: translateY(-50%) rotate(10deg) translateX(20px);
+  }
+
+  .ai-insight-card {
+    padding: 0.875rem 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .phone-stack {
+    height: 500px;
+    margin-top: 2rem;
+  }
+
+  .phone-container {
+    width: 100%;
+    max-width: 450px;
+    height: 420px;
+  }
+
+  .phone-mockup {
+    width: 180px;
+    height: 360px;
+  }
+
+  .phone-mockup:nth-child(1) {
+    transform: translateY(-50%) rotate(-8deg) translateX(-10px);
+  }
+
+  .phone-mockup:nth-child(2) {
+    transform: translate(-50%, -55%) scale(1.05);
+  }
+
+  .phone-mockup:nth-child(3) {
+    transform: translateY(-50%) rotate(8deg) translateX(10px);
+  }
+
+  .phone-stack:hover .phone-mockup:nth-child(1) {
+    transform: translateY(-50%) rotate(-8deg) translateX(-15px) translateY(-50px);
+  }
+
+  .phone-stack:hover .phone-mockup:nth-child(2) {
+    transform: translate(-50%, -58%) scale(1.08);
+  }
+
+  .phone-stack:hover .phone-mockup:nth-child(3) {
+    transform: translateY(-50%) rotate(8deg) translateX(15px) translateY(-50px);
+  }
+
+  .ai-insight-card {
+    bottom: 10px;
+    padding: 0.75rem 1rem;
+  }
+
+  .ai-insight-card h4 {
+    font-size: 0.7rem;
+  }
+
+  .ai-insight-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-container {
+    max-width: 350px;
+    height: 380px;
+  }
+
+  .phone-mockup {
+    width: 150px;
+    height: 300px;
+  }
+
+  .ai-insight-card {
+    padding: 0.625rem 0.875rem;
+  }
+
+  .ai-insight-card h4 {
+    font-size: 0.65rem;
+  }
+
+  .ai-insight-card p {
+    font-size: 0.8rem;
+  }
+}

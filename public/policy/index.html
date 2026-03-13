@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Privacy - Fingenie | AI-Powered Finance Assistant</title>
+    <meta name="description" content="Terms of Use and Privacy Policy for Fingenie, the AI-powered finance assistant. Learn about our terms, data protection, and privacy practices.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #13131a;
+            --bg-card: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6b7280;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --hover-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-card) 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem 0;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-banner {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .contact-banner a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-banner a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-purple);
+            display: inline-block;
+        }
+
+        .section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .section ul, .section ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--accent-purple);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .back-home a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .back-home a:hover {
+            transform: translateY(-2px);
+        }
+
+        .policy-updates {
+            background: rgba(139, 92, 246, 0.05);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .policy-updates h3 {
+            color: var(--accent-purple);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)" />
+                    <path d="M12 9H20V12H15V15H19V18H15V23H12V9Z" fill="white" />
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#8b5cf6" />
+                            <stop offset="100%" stop-color="#3b82f6" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">Fingenie</span>
+            </div>
+            <h1>Terms & Privacy</h1>
+            <p>Please reach out on email: <a href="mailto:support@fingenie.vurlex.in" style="color: #3b82f6;">support@fingenie.vurlex.in</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Terms of Use</h2>
+            
+            <h3>Overview and Acceptance</h3>
+            <p>The Application, Fingenie, is provided by Vurlex Technologies (the Developer) on an "as is" and "as available" basis, without warranties of any kind, whether express or implied. Data is the information stored by the Application.</p>
+            
+            <p>Any statistics displayed in the Application may be incomplete or incorrect; you are responsible for verifying information before relying on it. <span class="highlight">Fingenie is for informational purposes only and does not provide financial, tax, or legal advice.</span></p>
+            
+            <p>By downloading, installing, or using the Application, you agree to these Terms of Use and the Privacy Policy. We may update them from time to time by posting a new version on this website and updating the "Policy Updates" section. If you continue using the Application after the update takes effect, you accept the updated Terms.</p>
+            
+            <h3>Eligibility and Acceptable Use</h3>
+            <p>You represent that you are legally permitted to use the Application in your jurisdiction and that any information you enter is information you have the right to use. You agree not to use Fingenie in a way that interferes with the app's operation, attempts unauthorized access, or violates any applicable laws.</p>
+            
+            <h3>Liability</h3>
+            <p>To the fullest extent permitted by law, the Developer will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, Data, or goodwill arising from your use of (or inability to use) the Application. Where liability limitations are allowed, the Developer's total liability for any claim will not exceed the amount you paid for the Application in the twelve (12) months before the event giving rise to the claim (or $0 USD if you did not pay). Nothing in these Terms limits liability where it cannot be limited under applicable law.</p>
+            
+            <h3>License</h3>
+            <p>The Application is licensed, not sold. Subject to these Terms, the Developer grants you a personal, non-exclusive, non-transferable, revocable license to install and use the Application for your own personal, non-commercial use on devices you own or control.</p>
+            
+            <h3>Intellectual Property</h3>
+            <p>The Application and all related content and trademarks are owned by the Developer or licensors and are protected by applicable laws.</p>
+            
+            <h3>Third-Party Services</h3>
+            <p>The Application may interact with third-party services (for example, Google Drive for backups, app store services, or external APIs). Third-party services are governed by their own terms and policies, and the Developer is not responsible for them.</p>
+            
+            <h3>Governing Law</h3>
+            <p>These Terms are governed by the laws of [Your Jurisdiction], without regard to conflict-of-law rules. Any disputes will be brought in the courts located in [Your Jurisdiction], unless applicable law requires otherwise.</p>
+            
+            <h3>Termination</h3>
+            <p>These Terms remain in effect until terminated. You may stop using the Application at any time. The Developer may suspend or terminate your access if you materially violate these Terms. Sections intended to survive (including Warranty Disclaimer, Limitation of Liability, and Intellectual Property) will survive termination.</p>
+            
+            <h3>Updates, Availability, and Support</h3>
+            <p>The Developer may modify, suspend, or discontinue any part of the Application at any time, including features and supported integrations, and may release updates without obligation to continue supporting prior versions.</p>
+        </div>
+
+        <div class="section">
+            <h2>Privacy Policy</h2>
+            <p>We value the security and privacy of your financial and budget Data. This Privacy Policy describes what information Fingenie processes, where it is stored, and the choices you have.</p>
+            
+            <p><span class="highlight">The Developer does not operate servers to collect your financial Data. We do not sell personal information and we do not use advertising or in-app usage tracking/analytics.</span></p>
+            
+            <h3>On-device Data</h3>
+            <p>All Data is stored locally using an on-device SQL database and local storage for settings and other preferences. The Developer does not have access to this Data. Your Data remains on your device unless you choose to export it or enable cloud backup. If you export your Data, exported files are stored wherever you choose to save them.</p>
+            
+            <h3>Cloud Backup Service (Optional)</h3>
+            <p>If permissions are granted by the user, Fingenie can perform cloud backups of your Data using your personal Google Drive or iCloud. Since it is your personal cloud storage, the Developer does not receive or have access to these contents. Your use of Google Drive or iCloud is governed by their respective terms and privacy policies. The Developer is not responsible for third-party services.</p>
+            
+            <h3>Data Integrity</h3>
+            <p>While we make every effort to maintain Data integrity, it's important to understand that we cannot guarantee against loss or corruption. To ensure an additional layer of protection, we recommend maintaining an independent backup of your Data.</p>
+            
+            <h3>Security</h3>
+            <p>Security of on-device Data depends on your device security features (such as passcode/biometrics and operating-system encryption). We recommend enabling protections to keep your Data secure.</p>
+            
+            <h3>Data Deletion</h3>
+            <p>Data can be deleted at any time by clearing all Data within the Application or by clearing the Application's data in your device settings. Uninstalling the Application will typically remove on-device Data, but may not remove Data included in device backups, depending on your platform settings. Deleting the Application from your device does not automatically delete cloud backups stored in your cloud storage; you will need to delete the application Data from your cloud storage manually. Data deletion is documented in the FAQ. If you contact support, we may retain your message and any attachments as long as necessary to respond and for record-keeping, unless you request deletion where applicable.</p>
+            
+            <h3>Analytics Collection</h3>
+            <p>We do not use analytics or advertising trackers. In some cases, your platform (such as the App Store or Google Play) may provide aggregated diagnostics such as crash reports, which can include device type, OS version, and app version. If you provide feedback from within the Application or by email, we receive only the information you choose to share.</p>
+        </div>
+
+        <div class="section">
+            <h2>Licenses</h2>
+            <p>Fingenie is built with React and includes open-source libraries. Third-party components are licensed by their respective authors under their applicable licenses, which are included in the Application and/or in the relevant package documentation.</p>
+            
+            <p>The Application and all related content and trademarks are owned by the Developer or licensors and are protected by applicable laws. Trademarks, logos, and brand names are the property of their respective owners.</p>
+            
+            <p>Fingenie is an open source project. The source code is available on GitHub.</p>
+            
+            <ul>
+                <li>Icons: Lucide React</li>
+                <li>UI Framework: React + TypeScript</li>
+                <li>Build Tool: Vite</li>
+                <li>Fonts: System fonts (Inter, SF Pro, Roboto)</li>
+            </ul>
+        </div>
+
+        <div class="contact-banner">
+            <p><strong>Contact</strong></p>
+            <p>Feel free to reach out on email: <a href="mailto:support@fingenie.vurlex.in">support@fingenie.vurlex.in</a></p>
+        </div>
+
+        <div class="policy-updates">
+            <h3>Policy Updates</h3>
+            <ul>
+                <li><strong>March 12, 2026</strong> - Initial policy</li>
+                <li><strong>Future updates will be listed here</strong></li>
+            </ul>
+        </div>
+
+        <div class="back-home">
+            <a href="/">
+                ← Back to Home
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Fingenie | AI-Powered Finance Assistant</title>
+    <meta name="description" content="Frequently asked questions about Fingenie, the AI-powered finance assistant for intelligent budgeting and financial insights.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #13131a;
+            --bg-card: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6b7280;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --hover-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-card) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem 0;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-purple);
+            display: inline-block;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: var(--hover-bg);
+            border-color: var(--accent-purple);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-question:hover {
+            color: var(--accent-purple);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-answer h4 {
+            color: var(--text-primary);
+            margin: 1rem 0 0.5rem;
+            font-size: 1rem;
+        }
+
+        .faq-answer ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer code {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--accent-purple);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .expand-icon {
+            transition: transform 0.3s ease;
+            color: var(--accent-purple);
+        }
+
+        .expand-icon.rotated {
+            transform: rotate(180deg);
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .back-home a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .back-home a:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .faq-question {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .faq-answer {
+                padding: 0 1rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)" />
+                    <path d="M12 9H20V12H15V15H19V18H15V23H12V9Z" fill="white" />
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#8b5cf6" />
+                            <stop offset="100%" stop-color="#3b82f6" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">Fingenie</span>
+            </div>
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about Fingenie, your AI-powered finance assistant</p>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="section-title">Getting Started</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What is Fingenie and how does it work?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Fingenie is an AI-powered finance assistant that helps you navigate your finances with intelligent insights. Our app provides:</p>
+                    <ul>
+                        <li><strong>AI-powered budgeting:</strong> Smart categorization and spending analysis</li>
+                        <li><strong>Anomaly detection:</strong> Alerts for unusual spending patterns</li>
+                        <li><strong>Cashflow forecasting:</strong> Predictive insights for future financial planning</li>
+                        <li><strong>Intelligent insights:</strong> Personalized recommendations based on your spending habits</li>
+                    </ul>
+                    <p>Simply connect your accounts, and Fingenie's AI will automatically analyze your transactions, categorize spending, and provide actionable insights to help you make better financial decisions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How do I get started with Fingenie?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Getting started with Fingenie is simple:</p>
+                    <ol>
+                        <li><strong>Download the app</strong> from the App Store, Google Play, or access the web version</li>
+                        <li><strong>Create your account</strong> and set up your profile</li>
+                        <li><strong>Connect your financial accounts</strong> securely through our bank-level encryption</li>
+                        <li><strong>Let AI analyze your data</strong> - Fingenie will automatically categorize transactions and identify patterns</li>
+                        <li><strong>Explore insights</strong> - Review your AI-generated spending insights and forecasts</li>
+                        <li><strong>Set up budgets</strong> with AI recommendations based on your spending history</li>
+                    </ol>
+                    <p>The AI will start providing insights immediately, with more accurate predictions as it learns your spending patterns.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="section-title">AI Features & Insights</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How does Fingenie's AI analyze my spending?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Fingenie's AI uses advanced machine learning algorithms to:</p>
+                    <ul>
+                        <li><strong>Smart Categorization:</strong> Automatically categorizes transactions with 95%+ accuracy</li>
+                        <li><strong>Pattern Recognition:</strong> Identifies recurring expenses, seasonal spending, and unusual patterns</li>
+                        <li><strong>Predictive Analysis:</strong> Forecasts future spending based on historical data and trends</li>
+                        <li><strong>Anomaly Detection:</strong> Flags unusual transactions that may indicate fraud or overspending</li>
+                        <li><strong>Behavioral Insights:</strong> Provides personalized recommendations based on your unique spending habits</li>
+                    </ul>
+                    <p>The AI continuously learns from your financial behavior to provide increasingly accurate insights and predictions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What kind of AI insights can I expect?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Fingenie provides various AI-powered insights:</p>
+                    <h4>Spending Insights</h4>
+                    <ul>
+                        <li>Monthly spending trends and comparisons</li>
+                        <li>Category-wise spending analysis</li>
+                        <li>Identification of spending spikes and their causes</li>
+                    </ul>
+                    <h4>Predictive Forecasts</h4>
+                    <ul>
+                        <li>Next month's expected expenses</li>
+                        <li>Savings potential based on current trends</li>
+                        <li>Budget recommendations for different categories</li>
+                    </ul>
+                    <h4>Smart Alerts</h4>
+                    <ul>
+                        <li>Unusual transaction notifications</li>
+                        <li>Budget overspend warnings</li>
+                        <li>Opportunities to save money</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How accurate are Fingenie's AI predictions?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Fingenie's AI accuracy improves over time:</p>
+                    <ul>
+                        <li><strong>Initial Period (1-2 months):</strong> 70-80% accuracy as the AI learns your patterns</li>
+                        <li><strong>After 3 months:</strong> 85-90% accuracy with established spending patterns</li>
+                        <li><strong>Long-term (6+ months):</strong> 90-95% accuracy with comprehensive behavioral data</li>
+                    </ul>
+                    <p>The AI considers factors like seasonal variations, income changes, and life events to continuously refine its predictions. You can also provide feedback to help improve accuracy.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="section-title">Account Management & Security</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How secure is my financial data with Fingenie?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Security is our top priority. Fingenie employs multiple layers of protection:</p>
+                    <h4>Data Encryption</h4>
+                    <ul>
+                        <li>Bank-level 256-bit SSL encryption for all data transmission</li>
+                        <li>End-to-end encryption for stored data</li>
+                        <li>Zero-knowledge architecture - we cannot access your raw financial data</li>
+                    </ul>
+                    <h4>Access Controls</h4>
+                    <ul>
+                        <li>Multi-factor authentication (MFA) support</li>
+                        <li>Biometric authentication (fingerprint, face ID)</li>
+                        <li>Session timeout and automatic logout</li>
+                    </ul>
+                    <h4>Compliance</h4>
+                    <ul>
+                        <li>SOC 2 Type II certified</li>
+                        <li>GDPR and CCPA compliant</li>
+                        <li>Regular third-party security audits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Can I connect multiple bank accounts?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! Fingenie supports connecting multiple financial accounts:</p>
+                    <ul>
+                        <li><strong>Bank Accounts:</strong> Checking, savings, and money market accounts</li>
+                        <li><strong>Credit Cards:</strong> All major credit card providers</li>
+                        <li><strong>Investment Accounts:</strong> Brokerage and retirement accounts</li>
+                        <li><strong>Digital Wallets:</strong> PayPal, Venmo, and other digital payment platforms</li>
+                        <li><strong>Cryptocurrency:</strong> Major crypto exchanges and wallets</li>
+                    </ul>
+                    <p>The AI will analyze spending across all connected accounts to provide comprehensive insights and unified budgeting recommendations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How do I sync data across multiple devices?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Fingenie automatically syncs your data across all devices:</p>
+                    <h4>Automatic Sync</h4>
+                    <ul>
+                        <li>Real-time synchronization when connected to internet</li>
+                        <li>Offline mode with sync when connection is restored</li>
+                        <li>Cross-platform support (iOS, Android, Web)</li>
+                    </ul>
+                    <h4>Manual Sync</h4>
+                    <p>If you experience sync issues:</p>
+                    <ul>
+                        <li>Pull down on the main screen to force refresh</li>
+                        <li>Check your internet connection</li>
+                        <li>Ensure you're logged into the same account on all devices</li>
+                        <li>Contact support if issues persist</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="section-title">Budgeting & Goals</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How does AI-powered budgeting work?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Fingenie's AI creates intelligent budgets based on your spending patterns:</p>
+                    <h4>Smart Budget Creation</h4>
+                    <ul>
+                        <li>Analyzes 3-6 months of spending history</li>
+                        <li>Identifies essential vs. discretionary spending</li>
+                        <li>Suggests realistic budget amounts for each category</li>
+                        <li>Accounts for seasonal variations and trends</li>
+                    </ul>
+                    <h4>Dynamic Adjustments</h4>
+                    <ul>
+                        <li>Automatically adjusts budgets based on income changes</li>
+                        <li>Learns from your budget adherence patterns</li>
+                        <li>Provides alternative budget scenarios</li>
+                    </ul>
+                    <h4>Proactive Monitoring</h4>
+                    <ul>
+                        <li>Real-time budget tracking with smart alerts</li>
+                        <li>Predictive warnings before overspending</li>
+                        <li>Suggestions for staying on track</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Can I set savings goals with AI assistance?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! Fingenie's AI helps you set and achieve realistic savings goals:</p>
+                    <h4>Goal Setting</h4>
+                    <ul>
+                        <li>AI analyzes your income and expenses to suggest achievable savings amounts</li>
+                        <li>Recommends optimal timeframes based on your financial capacity</li>
+                        <li>Identifies areas where you can cut spending to boost savings</li>
+                    </ul>
+                    <h4>Progress Tracking</h4>
+                    <ul>
+                        <li>Visual progress indicators and milestone celebrations</li>
+                        <li>Automatic savings recommendations based on spending patterns</li>
+                        <li>Alerts when you're ahead or behind schedule</li>
+                    </ul>
+                    <h4>Smart Optimization</h4>
+                    <ul>
+                        <li>Suggests the best times to save based on your cash flow</li>
+                        <li>Identifies "found money" opportunities</li>
+                        <li>Recommends goal adjustments when circumstances change</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="section-title">Troubleshooting & Support</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What should I do if transactions aren't categorizing correctly?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>If the AI isn't categorizing transactions correctly:</p>
+                    <h4>Manual Corrections</h4>
+                    <ul>
+                        <li>Tap any transaction to manually change its category</li>
+                        <li>The AI learns from your corrections and improves over time</li>
+                        <li>Create custom categories for unique spending types</li>
+                    </ul>
+                    <h4>Training the AI</h4>
+                    <ul>
+                        <li>Correct 5-10 similar transactions to establish a pattern</li>
+                        <li>Use the "Always categorize [Merchant] as [Category]" option</li>
+                        <li>Provide feedback on AI suggestions to improve accuracy</li>
+                    </ul>
+                    <h4>Bulk Actions</h4>
+                    <ul>
+                        <li>Select multiple transactions to recategorize at once</li>
+                        <li>Use search and filters to find similar transactions</li>
+                        <li>Set up rules for automatic categorization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How do I contact Fingenie support?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We're here to help! Contact our support team through:</p>
+                    <h4>In-App Support</h4>
+                    <ul>
+                        <li>Go to Settings → Help & Support</li>
+                        <li>Use the in-app chat for immediate assistance</li>
+                        <li>Access our comprehensive help center</li>
+                    </ul>
+                    <h4>Email Support</h4>
+                    <ul>
+                        <li>Email us at <code>support@fingenie.vurlex.in</code></li>
+                        <li>Include your account email and detailed description</li>
+                        <li>Attach screenshots if relevant</li>
+                    </ul>
+                    <h4>Response Times</h4>
+                    <ul>
+                        <li>In-app chat: Usually within 1 hour during business hours</li>
+                        <li>Email support: Within 24 hours</li>
+                        <li>Critical issues: Immediate escalation available</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Is there a premium version of Fingenie?
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! Fingenie Pro offers advanced AI features and enhanced capabilities:</p>
+                    <h4>Pro Features</h4>
+                    <ul>
+                        <li><strong>Advanced AI Insights:</strong> Deeper analysis and more detailed predictions</li>
+                        <li><strong>Custom AI Models:</strong> Personalized AI trained specifically on your data</li>
+                        <li><strong>Investment Tracking:</strong> Portfolio analysis and investment insights</li>
+                        <li><strong>Tax Optimization:</strong> AI-powered tax planning and deduction identification</li>
+                        <li><strong>Priority Support:</strong> Faster response times and dedicated support</li>
+                        <li><strong>Advanced Reporting:</strong> Detailed financial reports and export options</li>
+                    </ul>
+                    <h4>Pricing</h4>
+                    <ul>
+                        <li>Monthly: $9.99/month</li>
+                        <li>Annual: $99.99/year (save 17%)</li>
+                        <li>Lifetime: $299.99 (one-time payment)</li>
+                    </ul>
+                    <p>Start with our free version and upgrade when you're ready for advanced features!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-home">
+            <a href="/">
+                ← Back to Home
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.expand-icon');
+            
+            // Close all other open FAQs
+            document.querySelectorAll('.faq-answer.active').forEach(activeAnswer => {
+                if (activeAnswer !== answer) {
+                    activeAnswer.classList.remove('active');
+                    activeAnswer.previousElementSibling.querySelector('.expand-icon').classList.remove('rotated');
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            icon.classList.toggle('rotated');
+        }
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

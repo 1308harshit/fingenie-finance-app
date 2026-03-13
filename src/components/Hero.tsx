@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import PhoneStack from './PhoneStack';
 import './Hero.css';
 

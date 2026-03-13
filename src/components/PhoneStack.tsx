@@ -16,7 +16,7 @@ const PhoneStack = () => {
       </div>
       <div className="ai-insight-card">
         <h4>AI Forecast</h4>
-        <p>+$420 savings next week</p>
+        <p>+₹15000 savings next week</p>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ const TermsAndConditions = () => {
 
         <div className="section">
           <h2>1. Agreement to Terms</h2>
-          <p>By downloading, installing, or using Fingenie (the "Application"), you agree to be bound by these Terms and Conditions. Fingenie is provided by Vurlex Technologies (the "Company").</p>
+          <p>By downloading, installing, or using Fingenie (the "Application"), you agree to be bound by these Terms and Conditions. Fingenie is provided by Vurlex Technologies, a company registered in India (the "Company").</p>
           
           <h3>Service Description</h3>
           <p>Fingenie is an AI-powered financial management application that provides:</p>
@@ -50,10 +50,11 @@ const TermsAndConditions = () => {
           <h2>2. Eligibility and User Requirements</h2>
           <p>To use Fingenie, you must:</p>
           <ul>
-            <li>Be at least 18 years old</li>
-            <li>Be legally capable of entering binding agreements in your jurisdiction</li>
+            <li>Be at least 18 years old and a resident of India</li>
+            <li>Be legally capable of entering binding agreements under Indian law</li>
             <li>Provide accurate and truthful information</li>
             <li>Have the legal right to use any financial data you input</li>
+            <li>Comply with all applicable Indian financial regulations and laws</li>
           </ul>
         </div>
 
@@ -85,7 +86,7 @@ const TermsAndConditions = () => {
 
         <div className="section">
           <h2>5. Limitation of Liability</h2>
-          <p>To the fullest extent permitted by law, Vurlex Technologies shall not be liable for:</p>
+          <p>To the fullest extent permitted under Indian law, Vurlex Technologies shall not be liable for:</p>
           <ul>
             <li>Any indirect, incidental, special, consequential, or punitive damages</li>
             <li>Loss of profits, data, use, goodwill, or other intangible losses</li>
@@ -94,7 +95,7 @@ const TermsAndConditions = () => {
             <li>Errors in AI predictions or financial calculations</li>
           </ul>
           
-          <p>Our total liability for any claim shall not exceed the amount you paid for Fingenie Pro in the twelve months preceding the claim, or $100, whichever is greater.</p>
+          <p><span className="highlight">Our total liability for any claim shall not exceed the amount you paid for Fingenie Pro in the twelve months preceding the claim, or ₹15,000, whichever is greater.</span> This limitation applies to all claims arising under or related to these Terms, whether in contract, tort, or otherwise.</p>
         </div>
 
         <div className="back-home">

@@ -1,7 +1,18 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './HeaderNav.css';
 
 const HeaderNav = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="header-nav">
       <div className="nav-container">
@@ -18,10 +29,19 @@ const HeaderNav = () => {
           </svg>
           <span className="logo-text">Fingenie</span>
         </div>
-        <nav className="nav-links">
-          <Link to="/faq">FAQ</Link>
-          <a href="#features">Features</a>
-          <a href="#github">GitHub</a>
+        
+        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+          <span className={isMenuOpen ? 'open' : ''}></span>
+          <span className={isMenuOpen ? 'open' : ''}></span>
+          <span className={isMenuOpen ? 'open' : ''}></span>
+        </button>
+
+        <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <Link to="/terms-and-conditions" onClick={closeMenu}>Terms & Conditions</Link>
+          <Link to="/policy" onClick={closeMenu}>Privacy Policy</Link>
+          <Link to="/faq" onClick={closeMenu}>FAQ</Link>
+          <a href="#features" onClick={closeMenu}>Features</a>
+          <a href="https://github.com/1308harshit/fingenie-finance-app" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>GitHub</a>
         </nav>
       </div>
     </header>

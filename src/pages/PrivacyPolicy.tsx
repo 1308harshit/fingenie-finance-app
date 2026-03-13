@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
           <h2>1. Our Privacy Commitment</h2>
           <p>At Fingenie, we are committed to protecting your financial privacy and maintaining the highest standards of data security. <span className="highlight">We do not sell, rent, or share your personal financial data with third parties for marketing purposes.</span></p>
           
-          <p>This Privacy Policy explains how Vurlex Technologies ("we," "us," or "our") collects, uses, processes, and protects your information when you use Fingenie.</p>
+          <p>This Privacy Policy explains how Vurlex Technologies, a company registered in India ("we," "us," or "our"), collects, uses, processes, and protects your information when you use Fingenie. We comply with the Information Technology Act, 2000 and applicable Indian data protection regulations.</p>
         </div>
 
         <div className="section">
@@ -78,7 +78,8 @@ const PrivacyPolicy = () => {
             <li><strong>Authentication:</strong> Multi-factor authentication and biometric security</li>
             <li><strong>Access Controls:</strong> Role-based access and principle of least privilege</li>
             <li><strong>Monitoring:</strong> 24/7 security monitoring and threat detection</li>
-            <li><strong>Compliance:</strong> SOC 2 Type II, GDPR, CCPA, and PCI DSS standards</li>
+            <li><strong>Compliance:</strong> Information Technology Act 2000, RBI guidelines, and international standards (ISO 27001, PCI DSS)</li>
+            <li><strong>Data Residency:</strong> Your data is stored on secure servers located in India</li>
           </ul>
         </div>
 
